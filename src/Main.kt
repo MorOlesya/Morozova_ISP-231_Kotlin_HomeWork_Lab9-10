@@ -34,4 +34,12 @@ fun main() {
     println("d2: ${d2.departmentName}")
     d2.printDepartmentGoal()
 
+    //Задание 5
+    println()
+    println("Задание 5")
+    val reports : List<ReportGenerator> = listOf(
+        Employee("Hik","Worker",100,1),
+        DevelopmentDepartment("Разработка мобильных игр"),
+        TestingDepartment("Тестирование") )
+    reports.forEach { part -> println(part.generateReport()) }
 }

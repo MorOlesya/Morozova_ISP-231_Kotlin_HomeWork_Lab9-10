@@ -3,7 +3,7 @@ class Employee (
     private val position: String,
     private val salary: Int,
     private val yearsOfExperience: Int
-) {
+) : ReportGenerator {
     val Ename: String
         get() = fullName
     val Eposition: String
@@ -24,4 +24,8 @@ class Employee (
                 field = value
             }
         }
+
+    override fun generateReport(): String {
+        return "ФИО: $Ename | Должность: $Eposition | Зарплата: $Esalary | Лет опыта: $Eexprience"
+    }
 }
